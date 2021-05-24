@@ -14,7 +14,7 @@ public class TestPila {
 
         p1.apilar(1);
         p2.apilar(5);
-        
+
         if (p1.pilaVacia() && p2.pilaVacia()) {
             System.out.println("Las pilas están vacías.");
         }
