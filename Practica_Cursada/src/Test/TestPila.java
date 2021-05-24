@@ -1,5 +1,6 @@
 package Test;
 
+import Metodos.Ejercicios;
 import apis.PilaTDA;
 import impl.PilaTF;
 import impl.PilaTI;
@@ -25,6 +26,7 @@ public class TestPila {
             System.out.println("Pila 2 = " + p2.tope());
         }
 
+        System.out.println("\nApilando e imprimiendo pilas");
         for (int i=0; i<=10; i++) {    //Agregar valores a pila
             p1.apilar(i);
             p2.apilar(i+10);
@@ -32,9 +34,38 @@ public class TestPila {
             System.out.println("Pila 2= " + p2.tope());
         }
 
+        System.out.println("\nDesapilando e imprimiendo pila 1");
+        while (!p1.pilaVacia()) { //Mientras la pila no esté vacía
+            System.out.println("Pila 1= " + p1.tope());
+            p1.desapilar();
+        }
+
+        System.out.println("\nDesapilando e imprimiendo pila 2");
+        while (!p2.pilaVacia()) {
+            System.out.println("Pila 2 desapilando= " + p2.tope());
+            p2.desapilar();
+        }
+
+        for (int i=0; i<=10; i++) {    //Agregar valores nuevamente a pilas
+            p1.apilar(i);
+            p2.apilar(i+10);
+        }
+
+        Ejercicios.pasarPila(p1, p2);
+
+        System.out.println("\n****Probando ejercicios****");
+
+        System.out.println("\nDesapilando e imprimiendo pila 1");
         while (!p1.pilaVacia()) { //Mientras la pila no esté vacía
             System.out.println("Pila 1 desapilando= " + p1.tope());
             p1.desapilar();
         }
+
+        System.out.println("\nDesapilando e imprimiendo pila 2");
+        while (!p2.pilaVacia()) { //Mientras la pila no esté vacía
+            System.out.println("Pila 2 desapilando= " + p2.tope());
+            p2.desapilar();
+        }
+
     }
 }

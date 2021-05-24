@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Cursada-Progra-II.iml" filepath="$PROJECT_DIR$/.idea/Cursada-Progra-II.iml" />
       <module fileurl="file://$PROJECT_DIR$/Practica_Cursada/Practica_Cursada.iml" filepath="$PROJECT_DIR$/Practica_Cursada/Practica_Cursada.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Teoria_Cursada/Teoria_Cursada.iml" filepath="$PROJECT_DIR$/Teoria_Cursada/Teoria_Cursada.iml" />
     </modules>
   </component>
 </project>
