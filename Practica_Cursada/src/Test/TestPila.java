@@ -27,7 +27,9 @@ public class TestPila {
 
         for (int i=0; i<=10; i++) {
             p1.apilar(i);
-            System.out.println(p1.tope());
+            p2.apilar(i+10);
+            System.out.println("Pila 1= " +p1.tope());
+            System.out.println("Pila 2= " + p2.tope());
         }
     }
 }
