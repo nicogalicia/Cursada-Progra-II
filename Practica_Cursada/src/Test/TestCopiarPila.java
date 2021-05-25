@@ -19,5 +19,12 @@ public class TestCopiarPila {
 
         Ejercicios.copiarPila(p1, p2);
 
+        System.out.println("\n**** Pila 1 ****");
+        Ejercicios.imprimirPila(p1);
+
+        System.out.println("\n**** Pila 2 ****");
+        Ejercicios.imprimirPila(p2);
+
+
     }
 }
