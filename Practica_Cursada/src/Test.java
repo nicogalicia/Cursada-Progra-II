@@ -1,19 +1,23 @@
 import apis.ColaTDA;
+import apis.ConjuntoTDA;
 import impl.ColaLD;
+import impl.ColaPI;
+import impl.ColaPrioridadAO;
+import impl.ConjuntoLD;
 
 public class Test {
     public static void main(String[] args) {
 
-        ColaTDA c1 = new ColaLD();
-        c1.inicializarCola();
+        ConjuntoTDA c = new ConjuntoLD();
+        c.inicializarConjunto();
 
         for (int i = 0; i<=10; i++) {
-            c1.acolar(i);
+            c.agregar(i);
         }
+        System.out.println(c.elegir());
 
-        while (!c1.colaVacia()) {
-            System.out.println(c1.primero());
-            c1.desacolar();
+        while (!c.conjuntoVacio()) {
+            c.sacar(c.elegir());
         }
     }
 }
