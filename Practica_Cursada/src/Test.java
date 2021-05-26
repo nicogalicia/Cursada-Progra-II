@@ -17,6 +17,5 @@ public class Test {
         System.out.println("La suma es: " + EjerciciosPilas.sumarElementosPila(p1));
         System.out.println("El promedio es: " + EjerciciosPilas.calcularPromedioPila(p1));
         EjerciciosPilas.imprimirPila(p1);
-
     }
 }
