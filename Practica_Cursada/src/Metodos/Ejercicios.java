@@ -1,6 +1,7 @@
 package Metodos;
 
 import apis.PilaTDA;
+import impl.PilaTF;
 import impl.PilaTI;
 
 public class Ejercicios {
@@ -44,5 +45,47 @@ public class Ejercicios {
         }
     }
 
-}
+    public static void invertirContenidoPila(PilaTDA p1) {
+        PilaTDA p2 = new PilaTF();
+        p2.inicializarPila();
 
+        Ejercicios.pasarPila(p1, p2);
+        Ejercicios.copiarPila(p2, p1);
+    }
+
+    public static int contarElementosPila(PilaTDA p1) {
+        PilaTDA pilaAux = new PilaTF();
+        int contador = 0;
+
+        pilaAux.inicializarPila();
+        Ejercicios.copiarPila(p1, pilaAux);
+
+        while (!pilaAux.pilaVacia()) {
+            pilaAux.desapilar();
+            contador++;
+        }
+        return contador;
+    }
+
+    public static double sumarElementosPila(PilaTDA p1) {
+        PilaTDA pilaAux = new PilaTF();
+        double sumatoria = 0;
+
+        pilaAux.inicializarPila();
+        Ejercicios.copiarPila(p1, pilaAux);
+
+        while (!pilaAux.pilaVacia()) {
+            sumatoria += pilaAux.tope();
+            pilaAux.desapilar();
+        }
+        return sumatoria;
+    }
+
+    public static double calcularPromedioPila(PilaTDA p1) {
+        PilaTDA pilaAux = new PilaTF();
+        pilaAux.inicializarPila();
+        Ejercicios.copiarPila(p1, pilaAux);
+
+        return Ejercicios.sumarElementosPila(pilaAux) / Ejercicios.contarElementosPila(pilaAux);
+    }
+}
