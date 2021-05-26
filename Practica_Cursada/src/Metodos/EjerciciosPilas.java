@@ -4,7 +4,7 @@ import apis.PilaTDA;
 import impl.PilaTF;
 import impl.PilaTI;
 
-public class Ejercicios {
+public class EjerciciosPilas {
     public static void pasarPila(PilaTDA p1, PilaTDA p2) { //Pasa a otra pila, dejandola en orden inverso
         while (!p1.pilaVacia()) {
             p2.apilar(p1.tope());
@@ -49,8 +49,8 @@ public class Ejercicios {
         PilaTDA p2 = new PilaTF();
         p2.inicializarPila();
 
-        Ejercicios.pasarPila(p1, p2);
-        Ejercicios.copiarPila(p2, p1);
+        pasarPila(p1, p2);
+        copiarPila(p2, p1);
     }
 
     public static int contarElementosPila(PilaTDA p1) {
@@ -58,7 +58,7 @@ public class Ejercicios {
         int contador = 0;
 
         pilaAux.inicializarPila();
-        Ejercicios.copiarPila(p1, pilaAux);
+        copiarPila(p1, pilaAux);
 
         while (!pilaAux.pilaVacia()) {
             pilaAux.desapilar();
@@ -72,7 +72,7 @@ public class Ejercicios {
         double sumatoria = 0;
 
         pilaAux.inicializarPila();
-        Ejercicios.copiarPila(p1, pilaAux);
+        copiarPila(p1, pilaAux);
 
         while (!pilaAux.pilaVacia()) {
             sumatoria += pilaAux.tope();
@@ -84,8 +84,8 @@ public class Ejercicios {
     public static double calcularPromedioPila(PilaTDA p1) {
         PilaTDA pilaAux = new PilaTF();
         pilaAux.inicializarPila();
-        Ejercicios.copiarPila(p1, pilaAux);
+        copiarPila(p1, pilaAux);
 
-        return Ejercicios.sumarElementosPila(pilaAux) / Ejercicios.contarElementosPila(pilaAux);
+        return sumarElementosPila(pilaAux) / contarElementosPila(pilaAux);
     }
 }

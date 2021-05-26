@@ -1,8 +1,7 @@
-import Metodos.Ejercicios;
+import Metodos.EjerciciosPilas;
 import apis.PilaTDA;
 import impl.PilaTF;
 
-import java.util.concurrent.RejectedExecutionException;
 
 public class Test {
     public static void main(String[] args) {
@@ -10,14 +9,14 @@ public class Test {
 
         p1.inicializarPila();
 
-        for (int i = 0; i<= 50; i++) {
+        for (int i = 0; i<= 5; i++) {
             p1.apilar(i);
         }
 
-        System.out.println("La cantidad de elementos es: " + Ejercicios.contarElementosPila(p1));
-        System.out.println("La suma es: " + Ejercicios.sumarElementosPila(p1));
-        System.out.println("El promedio es: " + Ejercicios.calcularPromedioPila(p1));
-        Ejercicios.imprimirPila(p1);
+        System.out.println("La cantidad de elementos es: " + EjerciciosPilas.contarElementosPila(p1));
+        System.out.println("La suma es: " + EjerciciosPilas.sumarElementosPila(p1));
+        System.out.println("El promedio es: " + EjerciciosPilas.calcularPromedioPila(p1));
+        EjerciciosPilas.imprimirPila(p1);
 
     }
 }
