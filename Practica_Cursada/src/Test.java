@@ -1,28 +1,33 @@
 import Metodos.EjerColas;
+import Metodos.EjerColasPrioridades;
 import Metodos.EjerConjuntos;
+import apis.ColaPrioridadTDA;
 import apis.ColaTDA;
 import apis.ConjuntoTDA;
 import impl.ColaLD;
 import impl.ColaPI;
+import impl.ColaPrioridadAO;
 import impl.ConjuntoLD;
 
 public class Test {
     public static void main(String[] args) {
-        ColaTDA c1 = new ColaPI();
-        ColaTDA c2 = new ColaPI();
+        ColaPrioridadTDA cp1 = new ColaPrioridadAO();
+        ColaPrioridadTDA cp2 = new ColaPrioridadAO();
 
-        c1.inicializarCola();
-        c2.inicializarCola();
+        cp1.inicializarCola();
+        cp2.inicializarCola();
 
+        int aux = 0;
         for (int i = 0; i<=10; i++) {
-            c1.acolar(i);
+            cp1.acolarPrioridad(i, aux);
+            aux++;
         }
 
-        System.out.println("Pila normal");
-        EjerColas.imprimirCola(c1);
-        System.out.println("Pila invertida");
-        EjerColas.invertirColaSinAux(c1);
-        EjerColas.imprimirCola(c1);
+        aux =0;
+        for (int i = 11; i<20; i++) {
+            cp2.acolarPrioridad(i, aux);
+            aux++;
+        }
 
     }
 }

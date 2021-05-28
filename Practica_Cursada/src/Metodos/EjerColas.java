@@ -1,8 +1,10 @@
 package Metodos;
 
+import apis.ColaPrioridadTDA;
 import apis.ColaTDA;
 import apis.PilaTDA;
 import impl.ColaPI;
+import impl.ColaPrioridadAO;
 import impl.PilaTF;
 
 public class EjerColas {
@@ -40,7 +42,7 @@ public class EjerColas {
         }
     }
 
-    public static void invertirCola(ColaTDA c1) {
+    public static void invertirColaConPilaAux(ColaTDA c1) {
         PilaTDA pilaAux = new PilaTF();
         pilaAux.inicializarPila();
 
@@ -70,7 +72,59 @@ public class EjerColas {
     }
 
     public static void invertirColaSinAux(ColaTDA c1) {
+        ColaPrioridadTDA colaAuxPrioridad = new ColaPrioridadAO();
+        colaAuxPrioridad.inicializarCola();
+        int contador;
+        int tamanio;
 
+        contador = contarElementosCola(c1);
 
+        while (!c1.colaVacia()) {
+            colaAuxPrioridad.acolarPrioridad(c1.primero(), contador);
+            c1.desacolar();
+            contador++;
+        }
+
+        while (!colaAuxPrioridad.colaVacia()) {
+            c1.acolar(colaAuxPrioridad.primero());
+            colaAuxPrioridad.desacolar();
+        }
+    }
+
+    public static boolean determinarColaCapicua(ColaTDA c1) {
+        ColaTDA colaAux = new ColaPI();
+        colaAux.inicializarCola();
+
+        copiarCola(c1, colaAux);
+        invertirColaSinAux(colaAux);
+
+        boolean flag = true;
+
+        while (!c1.colaVacia() && !colaAux.colaVacia()) {
+            if (c1.primero() != colaAux.primero()) {
+                flag = false;
+            }
+            c1.desacolar();
+            colaAux.desacolar();
+        }
+
+        return flag;
+    }
+
+    public static boolean determinarColaInversa (ColaTDA c1, ColaTDA c2) {
+        ColaTDA colaAux1 = new ColaPI();
+        ColaTDA colaAux2 = new ColaPI();
+        colaAux1.inicializarCola();
+        colaAux2.inicializarCola();
+
+        copiarCola(c1, colaAux1);
+        copiarCola(c2, colaAux2);
+
+        while (!colaAux2.colaVacia()) {
+            colaAux1.acolar(colaAux2.primero());
+            colaAux2.desacolar();
+        }
+
+        return determinarColaCapicua(colaAux1);
     }
 }
