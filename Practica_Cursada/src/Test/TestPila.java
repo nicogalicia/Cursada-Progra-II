@@ -2,7 +2,7 @@
 
 package Test;
 
-import Metodos.Pilas;
+import Metodos.EjerPilas;
 import apis.PilaTDA;
 import impl.PilaTF;
 import impl.PilaTI;
@@ -53,7 +53,7 @@ public class TestPila {
             p2.apilar(i+10);
         }
 
-        Pilas.pasarPila(p1, p2);
+        EjerPilas.pasarPila(p1, p2);
 
         System.out.println("\n****Probando ejercicios****");
 
