@@ -1,3 +1,4 @@
+import Metodos.Conjuntos;
 import apis.ColaTDA;
 import apis.ConjuntoTDA;
 import impl.ColaLD;
@@ -14,10 +15,7 @@ public class Test {
         for (int i = 0; i<=10; i++) {
             c.agregar(i);
         }
-        System.out.println(c.elegir());
 
-        while (!c.conjuntoVacio()) {
-            c.sacar(c.elegir());
+        Conjuntos.imprimirConjunto(c);
         }
     }
-}

@@ -1,6 +1,6 @@
 package Test;
 
-import Metodos.EjerciciosPilas;
+import Metodos.Pilas;
 import apis.PilaTDA;
 import impl.PilaTF;
 import impl.PilaTI;
@@ -17,13 +17,13 @@ public class TestCopiarPila {
             p1.apilar(i);
         }
 
-        EjerciciosPilas.copiarPila(p1, p2);
+        Pilas.copiarPila(p1, p2);
 
         System.out.println("\n**** Pila 1 ****");
-        EjerciciosPilas.imprimirPila(p1);
+        Pilas.imprimirPila(p1);
 
         System.out.println("\n**** Pila 2 ****");
-        EjerciciosPilas.imprimirPila(p2);
+        Pilas.imprimirPila(p2);
 
 
     }
