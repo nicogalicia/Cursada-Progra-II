@@ -40,6 +40,10 @@ public class EjerColas {
             System.out.println(colaAux.primero());
             colaAux.desacolar();
         }
+
+        if (c1.colaVacia()) {
+            System.out.println("La cola está vacía");
+        }
     }
 
     public static void invertirColaConPila(ColaTDA c1) {

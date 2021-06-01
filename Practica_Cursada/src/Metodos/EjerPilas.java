@@ -7,7 +7,7 @@ import impl.PilaTF;
 import impl.PilaTI;
 
 public class EjerPilas {
-    public static void pasarPila(PilaTDA p1, PilaTDA p2) { //Pasa a otra pila, dejandola en orden inverso, elimina la original
+    public static void pasarPila(PilaTDA p1, PilaTDA p2) { //Elimina original, deja en orden inverso
         while (!p1.pilaVacia()) {
             p2.apilar(p1.tope());
             p1.desapilar();
@@ -44,6 +44,10 @@ public class EjerPilas {
         while (!pilaAux.pilaVacia()) {
             p1.apilar(pilaAux.tope());
             pilaAux.desapilar();
+        }
+
+        if (p1.pilaVacia()) {
+            System.out.println("La pila está vacía");
         }
     }
 
