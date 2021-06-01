@@ -1,11 +1,13 @@
 package Metodos;
 
+import apis.ConjuntoTDA;
 import apis.PilaTDA;
+import impl.ConjuntoLD;
 import impl.PilaTF;
 import impl.PilaTI;
 
 public class EjerPilas {
-    public static void pasarPila(PilaTDA p1, PilaTDA p2) { //Pasa a otra pila, dejandola en orden inverso
+    public static void pasarPila(PilaTDA p1, PilaTDA p2) { //Pasa a otra pila, dejandola en orden inverso, elimina la original
         while (!p1.pilaVacia()) {
             p2.apilar(p1.tope());
             p1.desapilar();
@@ -87,5 +89,22 @@ public class EjerPilas {
         copiarPila(p1, pilaAux);
 
         return sumarElementosPila(pilaAux) / contarElementosPila(pilaAux);
+    }
+
+    public static void eliminarRepetidos(PilaTDA p1) {
+        ConjuntoTDA conjuntoAux = new ConjuntoLD();
+        PilaTDA pilaAux = new PilaTF();
+        conjuntoAux.inicializarConjunto();
+        pilaAux.inicializarPila();
+
+        pasarPila(p1, pilaAux);
+
+        while (!pilaAux.pilaVacia()) {
+            if (!conjuntoAux.pertenece(pilaAux.tope())) {
+                conjuntoAux.agregar(pilaAux.tope());
+                p1.apilar(pilaAux.tope());
+            }
+            pilaAux.desapilar();
+        }
     }
 }

@@ -42,7 +42,7 @@ public class EjerColas {
         }
     }
 
-    public static void invertirColaConPilaAux(ColaTDA c1) {
+    public static void invertirColaConPila(ColaTDA c1) {
         PilaTDA pilaAux = new PilaTF();
         pilaAux.inicializarPila();
 
