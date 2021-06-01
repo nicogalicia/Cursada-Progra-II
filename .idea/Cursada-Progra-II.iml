@@ -10,7 +10,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../PPTs Progra II/JAR/Parcial.jar!/" />
+          <root url="jar://$MODULE_DIR$/Parcial.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
