@@ -33,6 +33,9 @@ public class EjerColasPrioridades {
             auxCola.desacolar();
         }
 
+        if (cp1.colaVacia()) {
+            System.out.println("La cola está vacía");
+        }
     }
 
     public static void combinarColasPrioridades (ColaPrioridadTDA cp1, ColaPrioridadTDA cp2, ColaPrioridadTDA cp3) { //A igual prioridad, los de CP1 van primero
