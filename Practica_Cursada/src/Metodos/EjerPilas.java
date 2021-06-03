@@ -96,20 +96,7 @@ public class EjerPilas {
     }
 
     public static void eliminarRepetidos(PilaTDA p1) {
-        ConjuntoTDA conjuntoAux = new ConjuntoLD();
-        PilaTDA pilaAux = new PilaTF();
-        conjuntoAux.inicializarConjunto();
-        pilaAux.inicializarPila();
 
-        pasarPila(p1, pilaAux);
-
-        while (!pilaAux.pilaVacia()) {
-            if (!conjuntoAux.pertenece(pilaAux.tope())) {
-                conjuntoAux.agregar(pilaAux.tope());
-                p1.apilar(pilaAux.tope());
-            }
-            pilaAux.desapilar();
-        }
     }
 
     public static boolean determinarCapicua(PilaTDA p1) {
@@ -136,6 +123,7 @@ public class EjerPilas {
             }
         }
         return flag;
-
     }
+
+
 }
