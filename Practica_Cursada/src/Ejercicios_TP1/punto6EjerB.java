@@ -27,7 +27,7 @@ public class punto6EjerB {
             System.out.println("Las colas son identicas");
         }
         else {
-            System.out.println("Lascolas son diferentes");
+            System.out.println("Las colas son diferentes");
         }
     }
 }
