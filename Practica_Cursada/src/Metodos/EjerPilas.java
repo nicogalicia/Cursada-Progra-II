@@ -111,4 +111,31 @@ public class EjerPilas {
             pilaAux.desapilar();
         }
     }
+
+    public static boolean determinarCapicua(PilaTDA p1) {
+        PilaTDA pilaAux = new PilaTF();
+        PilaTDA pilaAux1 = new PilaTF();
+
+        pilaAux.inicializarPila();
+        pilaAux1.inicializarPila();
+
+        boolean flag = true;
+        int aux;
+        copiarPila(p1, pilaAux);
+        copiarPila(p1, pilaAux1);
+        invertirContenidoPila(pilaAux1);
+        aux = contarElementosPila(p1) / 2;
+
+        for (int i = 1; i<=aux; i++) {
+            if (pilaAux.tope() != pilaAux1.tope()) {
+                flag = false;
+            }
+            else {
+                pilaAux.desapilar();
+                pilaAux1.desapilar();
+            }
+        }
+        return flag;
+
+    }
 }
