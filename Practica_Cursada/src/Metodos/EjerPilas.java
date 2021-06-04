@@ -95,8 +95,28 @@ public class EjerPilas {
         return sumarElementosPila(pilaAux) / contarElementosPila(pilaAux);
     }
 
-    public static void eliminarRepetidos(PilaTDA p1) {
+    public static void eliminarRepetidos(PilaTDA p1) { //Manteniendo el orden de los elementos
+        PilaTDA pilaCopia = new PilaTF();
+        ConjuntoTDA conAux = new ConjuntoLD();
+        pilaCopia.inicializarPila();
+        conAux.inicializarConjunto();
 
+        copiarPila(p1, pilaCopia); //copiar contenido pila
+
+        while (!p1.pilaVacia()) { //saca elementos pila y rellenar conjunto
+            conAux.agregar(p1.tope());
+            p1.desapilar();
+        }
+
+        while (!pilaCopia.pilaVacia()) {
+            if (conAux.pertenece(pilaCopia.tope())) {
+                conAux.sacar(pilaCopia.tope());
+                p1.apilar(pilaCopia.tope());
+            }
+            pilaCopia.desapilar();
+        }
+
+        invertirContenidoPila(p1);
     }
 
     public static boolean determinarCapicua(PilaTDA p1) {
@@ -125,5 +145,22 @@ public class EjerPilas {
         return flag;
     }
 
+    public static void elementosRepetidos (PilaTDA p1, ConjuntoTDA co1) {
+        PilaTDA pilaAux = new PilaTF();
+        ConjuntoTDA conjuntoAux = new ConjuntoLD();
+        pilaAux.inicializarPila();
+        conjuntoAux.inicializarConjunto();
 
+        copiarPila(p1, pilaAux);
+
+        while (!pilaAux.pilaVacia()) {
+            if (!conjuntoAux.pertenece(pilaAux.tope())) {
+                conjuntoAux.agregar(pilaAux.tope());
+            }
+            else {
+                co1.agregar(pilaAux.tope());
+            }
+            pilaAux.desapilar();
+        }
+    }
 }
