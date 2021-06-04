@@ -163,4 +163,24 @@ public class EjerPilas {
             pilaAux.desapilar();
         }
     }
+
+    public static void dividirPila(PilaTDA p1, PilaTDA p2) {
+        PilaTDA pilaAux = new PilaTF();
+        pilaAux.inicializarPila();
+        int contador = contarElementosPila(p1) / 2;
+
+        pasarPila(p1, pilaAux);
+
+        for (int i = 1; i<=contador; i++) {
+            p2.apilar(pilaAux.tope());
+            pilaAux.desapilar();
+        }
+
+        while (!pilaAux.pilaVacia()) {
+            p1.apilar(pilaAux.tope());
+            pilaAux.desapilar();
+        }
+
+
+    }
 }

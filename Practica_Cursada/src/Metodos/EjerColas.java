@@ -115,7 +115,7 @@ public class EjerColas {
         return flag;
     }
 
-    public static boolean determinarColaInversa (ColaTDA c1, ColaTDA c2) {
+    public static boolean determinarColaInversa (ColaTDA c1, ColaTDA c2) { //si una cola es exactamente inversa a la otra
         ColaTDA colaAux1 = new ColaPI();
         ColaTDA colaAux2 = new ColaPI();
         colaAux1.inicializarCola();
