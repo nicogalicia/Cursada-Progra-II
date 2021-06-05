@@ -2,9 +2,11 @@ package Metodos;
 
 import apis.ColaPrioridadTDA;
 import apis.ColaTDA;
+import apis.ConjuntoTDA;
 import apis.PilaTDA;
 import impl.ColaPI;
 import impl.ColaPrioridadAO;
+import impl.ConjuntoLD;
 import impl.PilaTF;
 
 public class EjerColas {
@@ -130,5 +132,56 @@ public class EjerColas {
         }
 
         return determinarColaCapicua(colaAux1);
+    }
+
+    public static void eliminarRepetidos(ColaTDA c1) {
+        ConjuntoTDA conjuntoAux = new ConjuntoLD();
+        ColaTDA colaAux = new ColaPI();
+        conjuntoAux.inicializarConjunto();
+        colaAux.inicializarCola();
+
+        pasarCola(c1, colaAux);
+
+        while (!colaAux.colaVacia()) {
+            if (!conjuntoAux.pertenece(colaAux.primero())) {
+                conjuntoAux.agregar(colaAux.primero());
+                c1.acolar(colaAux.primero());
+            }
+            colaAux.desacolar();
+        }
+    }
+
+    public static void dividirCola(ColaTDA c1, ColaTDA m1, ColaTDA m2) {
+        int contador = contarElementosCola(c1) / 2;
+
+        for (int i = 1; i<= contador; i++) {
+            m1.acolar(c1.primero());
+            c1.desacolar();
+        }
+
+        while (!c1.colaVacia()) {
+            m2.acolar(c1.primero());
+            c1.desacolar();
+        }
+    }
+
+    public static void elementosRepetidos (ColaTDA c1, ConjuntoTDA repetidos) {
+        ColaTDA colaAux = new ColaPI();
+        ConjuntoTDA conjutoAux = new ConjuntoLD();
+        colaAux.inicializarCola();
+        conjutoAux.inicializarConjunto();
+
+        copiarCola(c1, colaAux);
+
+        while (!colaAux.colaVacia()) {
+            if (!conjutoAux.pertenece(colaAux.primero())) {
+                conjutoAux.agregar(colaAux.primero());
+            }
+            else {
+                repetidos.agregar(colaAux.primero());
+            }
+            colaAux.desacolar();
+        }
+
     }
 }
