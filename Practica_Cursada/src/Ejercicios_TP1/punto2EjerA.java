@@ -26,6 +26,6 @@ public class punto2EjerA {
         System.out.println("Pila 2");
         EjerPilas.imprimirPila(p2);
 
-        System.out.println("Test");
+        System.out.println("Simulacros");
     }
 }
