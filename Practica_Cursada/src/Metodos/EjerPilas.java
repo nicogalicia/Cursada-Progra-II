@@ -95,28 +95,24 @@ public class EjerPilas {
         return sumarElementosPila(pilaAux) / contarElementosPila(pilaAux);
     }
 
-    public static void eliminarRepetidos(PilaTDA p1) { //Manteniendo el orden de los elementos
-        PilaTDA pilaCopia = new PilaTF();
-        ConjuntoTDA conAux = new ConjuntoLD();
-        pilaCopia.inicializarPila();
-        conAux.inicializarConjunto();
+    public static void eliminarRepetidos(PilaTDA p1) {
+        PilaTDA pilaAux = new PilaTF();
+        ConjuntoTDA conjuntoAux = new ConjuntoLD();
+        pilaAux.inicializarPila();
+        conjuntoAux.inicializarConjunto();
 
-        copiarPila(p1, pilaCopia); //copiar contenido pila
-
-        while (!p1.pilaVacia()) { //saca elementos pila y rellenar conjunto
-            conAux.agregar(p1.tope());
+        while (!p1.pilaVacia()) {
+            if (!conjuntoAux.pertenece(p1.tope())) {
+                conjuntoAux.agregar(p1.tope());
+                pilaAux.apilar(p1.tope());
+            }
             p1.desapilar();
         }
 
-        while (!pilaCopia.pilaVacia()) {
-            if (conAux.pertenece(pilaCopia.tope())) {
-                conAux.sacar(pilaCopia.tope());
-                p1.apilar(pilaCopia.tope());
-            }
-            pilaCopia.desapilar();
+        while (!pilaAux.pilaVacia()) {
+            p1.apilar(pilaAux.tope());
+            pilaAux.desapilar();
         }
-
-        invertirContenidoPila(p1);
     }
 
     public static boolean determinarCapicua(PilaTDA p1) {
