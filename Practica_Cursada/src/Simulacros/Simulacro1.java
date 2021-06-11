@@ -3,6 +3,7 @@ package Simulacros;
 import apis.ConjuntoTDA;
 import apis.PilaTDA;
 import impl.ConjuntoLD;
+import impl.ConjuntoTA;
 import impl.PilaTF;
 import impl.PilaTI;
 
@@ -28,7 +29,7 @@ public class Simulacro1 {
         }
     }
 
-    public static void eliminarRepetidos(PilaTDA p1) {
+    public static void eliminarRepetidosOpcion1(PilaTDA p1) {
         PilaTDA pilaAux = new PilaTF();
         ConjuntoTDA conjuntoAux = new ConjuntoLD();
         pilaAux.inicializarPila();
@@ -48,6 +49,26 @@ public class Simulacro1 {
         }
     }
 
+    public static void eliminarRepetidosOpcion2(PilaTDA p1) {
+        ConjuntoTDA conjuntoAux = new ConjuntoTA();
+        conjuntoAux.inicializarConjunto();
+        PilaTDA pilaAux = new PilaTF();
+        pilaAux.inicializarPila();
+
+        while (!p1.pilaVacia()){
+            pilaAux.apilar(p1.tope());
+            p1.desapilar();
+        }
+        while (!pilaAux.pilaVacia()) {
+            if (!conjuntoAux.pertenece(pilaAux.tope())) {
+                p1.apilar(pilaAux.tope());
+                conjuntoAux.agregar(pilaAux.tope());
+            }
+            pilaAux.desapilar();
+        }
+
+    }
+
     public static void main(String[] args) {
         PilaTDA p1 = new PilaTF();
         p1.inicializarPila();
@@ -64,7 +85,7 @@ public class Simulacro1 {
         System.out.println("Pila original");
         imprimirPila(p1);
 
-        eliminarRepetidos(p1);
+        eliminarRepetidosOpcion1(p1);
 
         System.out.println("Pila modificada");
         imprimirPila(p1);
