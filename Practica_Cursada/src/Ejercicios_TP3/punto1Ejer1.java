@@ -19,11 +19,7 @@ public class punto1Ejer1 {
         System.out.println("Pila Original");
         EjerPilas.imprimirPila(p1);
 
-        if (EjerPilas.determinarCapicua(p1)) {
-            System.out.println("La pila es capicúa");
-        }
-        else {
-            System.out.println("La pila no es capicúa");
-        }
+        String capicua = (EjerPilas.determinarCapicua(p1)) ? "La pila es capicúa" : "La pila no es capicúa";
+        System.out.println("\n" + capicua);
     }
 }

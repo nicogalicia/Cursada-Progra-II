@@ -7,7 +7,7 @@ import impl.ConjuntoTA;
 import impl.PilaTF;
 import impl.PilaTI;
 
-public class Simulacro1 {
+public class Simulacro1Parcial {
 
     public static void imprimirPila(PilaTDA p1) {
         PilaTDA pilaAux = new PilaTI();

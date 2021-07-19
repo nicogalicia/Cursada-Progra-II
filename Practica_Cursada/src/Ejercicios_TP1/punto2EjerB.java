@@ -18,7 +18,11 @@ public class punto2EjerB {
 
         System.out.println("Pila 1");
         EjerPilas.imprimirPila(p1);
-        System.out.println("Pila 2");
+
+        System.out.println("\nPila 2");
         EjerPilas.imprimirPila(p2);
+
+        System.out.println("\nNuevamnte pila 1");
+        EjerPilas.imprimirPila(p1);
     }
 }

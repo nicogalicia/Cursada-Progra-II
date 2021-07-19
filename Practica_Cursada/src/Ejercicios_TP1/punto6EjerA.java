@@ -28,12 +28,12 @@ public class punto6EjerA {
         System.out.println("Cola 1");
         EjerColasPrioridades.imprimirColaPrioridad(cp1);
 
-        System.out.println("Cola 2");
+        System.out.println("\nCola 2");
         EjerColasPrioridades.imprimirColaPrioridad(cp2);
 
         EjerColasPrioridades.combinarColasPrioridades(cp1, cp2, cp3);
 
-        System.out.println("Cola combinada");
+        System.out.println("\nCola combinada");
         EjerColasPrioridades.imprimirColaPrioridad(cp3);
     }
 }

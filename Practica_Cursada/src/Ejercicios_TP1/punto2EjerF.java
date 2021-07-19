@@ -15,6 +15,9 @@ public class punto2EjerF {
         System.out.println("Pila Original");
         EjerPilas.imprimirPila(p1);
 
-        System.out.println("El promedio de los elementos es: " + EjerPilas.calcularPromedioPila(p1));
+        System.out.println("\nEl promedio de los elementos es: " + EjerPilas.calcularPromedioPila(p1));
+
+        System.out.println("\nNuevamente Pila 1");
+        EjerPilas.imprimirPila(p1);
     }
 }

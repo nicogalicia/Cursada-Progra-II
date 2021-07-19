@@ -19,12 +19,7 @@ public class punto4EjerE {
         System.out.println("Cola Original");
         EjerColas.imprimirCola(c1);
 
-        if (EjerColas.determinarColaCapicua(c1)) {
-            System.out.println("La cola es capicúa");
-        }
-
-        else {
-            System.out.println("La cola no es capicúa");
-        }
+        String capicua = (EjerColas.determinarColaCapicua(c1)) ? "La cola es capicua" : "La cola no es capicua";
+        System.out.println("\n" + capicua);
     }
 }

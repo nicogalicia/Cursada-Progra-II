@@ -20,12 +20,10 @@ public class punto2EjerA {
 
         EjerPilas.pasarPila(p1, p2);
 
-        System.out.println("Nuevamente Pila 1");
+        System.out.println("\nNuevamente Pila 1");
         EjerPilas.imprimirPila(p1);
 
-        System.out.println("Pila 2");
+        System.out.println("\nPila 2");
         EjerPilas.imprimirPila(p2);
-
-        System.out.println("Simulacros");
     }
 }

@@ -24,7 +24,7 @@ public class punto1Ejer2 {
 
         EjerPilas.eliminarRepetidos(p1);
 
-        System.out.println("Pila modificada");
+        System.out.println("\nPila modificada");
         EjerPilas.imprimirPila(p1);
     }
 }

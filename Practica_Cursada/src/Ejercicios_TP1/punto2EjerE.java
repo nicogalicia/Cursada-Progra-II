@@ -17,6 +17,6 @@ public class punto2EjerE {
         System.out.println("Pila Original");
         EjerPilas.imprimirPila(p1);
 
-        System.out.println("La suma de los elementos es: " + EjerPilas.sumarElementosPila(p1));
+        System.out.println("\nLa suma de los elementos es: " + EjerPilas.sumarElementosPila(p1));
     }
 }

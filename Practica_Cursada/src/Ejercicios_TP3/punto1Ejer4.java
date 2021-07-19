@@ -23,7 +23,7 @@ public class punto1Ejer4 {
 
         EjerPilas.elementosRepetidos(p1, co1);
 
-        System.out.println("Conjunto de elementos repetidos");
+        System.out.println("\nConjunto de elementos repetidos");
         EjerConjuntos.imprimirConjunto(co1);
     }
 }

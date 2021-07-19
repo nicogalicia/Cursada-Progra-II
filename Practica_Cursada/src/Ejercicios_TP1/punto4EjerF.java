@@ -22,14 +22,10 @@ public class punto4EjerF {
         System.out.println("Cola 1");
         EjerColas.imprimirCola(c1);
 
-        System.out.println("Cola 2");
+        System.out.println("\nCola 2");
         EjerColas.imprimirCola(c2);
 
-        if (EjerColas.determinarColaInversa(c1, c2)) {
-            System.out.println("Las colas son inversas");
-        }
-        else {
-            System.out.println("Las colas no son inversas");
-        }
+        String inverso = (EjerColas.determinarColaInversa(c1, c2)) ? "Las colas son inversas" : "Las colas no son inversas";
+        System.out.println("\n" + inverso);
     }
 }

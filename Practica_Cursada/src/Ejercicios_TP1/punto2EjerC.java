@@ -17,7 +17,7 @@ public class punto2EjerC {
 
         EjerPilas.invertirContenidoPila(p1);
 
-        System.out.println("Pila Invertida");
+        System.out.println("\nPila Invertida");
         EjerPilas.imprimirPila(p1);
     }
 }

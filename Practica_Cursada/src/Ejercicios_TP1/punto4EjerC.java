@@ -17,7 +17,7 @@ public class punto4EjerC {
 
         EjerColas.invertirColaSinAux(c1);
 
-        System.out.println("Cola Invertida");
+        System.out.println("\nCola Invertida");
         EjerColas.imprimirCola(c1);
 
     }

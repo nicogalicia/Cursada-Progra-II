@@ -14,17 +14,17 @@ public class punto1Ejer3 {
         segundaMitad.inicializarPila();
 
         Auxiliares.rellenarPila(p1);
-        p1.apilar(11);
+        p1.apilar(11); //para que sea par la cantidad de elementos
 
         System.out.println("Pila Original");
         EjerPilas.imprimirPila(p1);
 
         EjerPilas.dividirPila(p1, segundaMitad);
 
-        System.out.println("Primer mitad");
+        System.out.println("\nPrimer mitad");
         EjerPilas.imprimirPila(p1);
 
-        System.out.println("Segunda Mitad");
+        System.out.println("\nSegunda Mitad");
         EjerPilas.imprimirPila(segundaMitad);
     }
 }

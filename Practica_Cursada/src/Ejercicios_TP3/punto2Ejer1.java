@@ -24,7 +24,7 @@ public class punto2Ejer1 {
 
         EjerColas.eliminarRepetidos(c1);
 
-        System.out.println("Cola modificada");
+        System.out.println("\nCola modificada");
         EjerColas.imprimirCola(c1);
     }
 }

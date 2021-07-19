@@ -73,9 +73,9 @@ public class EjerPilas {
         return contador;
     }
 
-    public static double sumarElementosPila(PilaTDA p1) {
+    public static int sumarElementosPila(PilaTDA p1) {
         PilaTDA pilaAux = new PilaTF();
-        double sumatoria = 0;
+        int sumatoria = 0;
 
         pilaAux.inicializarPila();
         copiarPila(p1, pilaAux);
@@ -87,19 +87,16 @@ public class EjerPilas {
         return sumatoria;
     }
 
-    public static double calcularPromedioPila(PilaTDA p1) {
-        PilaTDA pilaAux = new PilaTF();
-        pilaAux.inicializarPila();
-        copiarPila(p1, pilaAux);
-
-        return sumarElementosPila(pilaAux) / contarElementosPila(pilaAux);
+    public static int calcularPromedioPila(PilaTDA p1) {
+        return sumarElementosPila(p1) / contarElementosPila(p1);
     }
 
-    public static void eliminarRepetidos(PilaTDA p1) {
+    public static void eliminarRepetidos(PilaTDA p1) { //Mantiene orden de entrada, NO de salida
         PilaTDA pilaAux = new PilaTF();
         ConjuntoTDA conjuntoAux = new ConjuntoLD();
         pilaAux.inicializarPila();
         conjuntoAux.inicializarConjunto();
+        invertirContenidoPila(p1);
 
         while (!p1.pilaVacia()) {
             if (!conjuntoAux.pertenece(p1.tope())) {

@@ -15,6 +15,6 @@ public class punto2EjerD {
         System.out.println("Pila Original");
         EjerPilas.imprimirPila(p1);
 
-        System.out.println("La cantidad de elementos es: " + EjerPilas.contarElementosPila(p1));
+        System.out.println("\nLa cantidad de elementos es: " + EjerPilas.contarElementosPila(p1));
     }
 }

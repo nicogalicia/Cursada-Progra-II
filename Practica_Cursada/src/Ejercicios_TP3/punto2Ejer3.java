@@ -22,7 +22,7 @@ public class punto2Ejer3 {
 
         EjerColas.elementosRepetidos(c1, repetidos);
 
-        System.out.println("Los elementos repetidos son: ");
+        System.out.println("\nLos elementos repetidos son: ");
         EjerConjuntos.imprimirConjunto(repetidos);
     }
 }

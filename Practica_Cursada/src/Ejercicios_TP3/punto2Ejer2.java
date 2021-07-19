@@ -23,10 +23,10 @@ public class punto2Ejer2 {
 
         EjerColas.dividirCola(c1, m1, m2);
 
-        System.out.println("La primer mitad");
+        System.out.println("\nLa primer mitad");
         EjerColas.imprimirCola(m1);
 
-        System.out.println("La segunda mitad");
+        System.out.println("\nLa segunda mitad");
         EjerColas.imprimirCola(m2);
 
     }

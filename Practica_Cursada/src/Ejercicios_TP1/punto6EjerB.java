@@ -15,19 +15,18 @@ public class punto6EjerB {
 
         Auxiliares.rellenaColaPrioridad(cp1);
         Auxiliares.rellenaColaPrioridad(cp2);
-//        cp1.acolarPrioridad(1, 1);
 
         System.out.println("Cola 1");
         EjerColasPrioridades.imprimirColaPrioridad(cp1);
 
-        System.out.println("Cola 2");
+        System.out.println("\nCola 2");
         EjerColasPrioridades.imprimirColaPrioridad(cp2);
 
         if (EjerColasPrioridades.determinarColaPrioridadIdenticas(cp1, cp2)) {
-            System.out.println("Las colas son identicas");
+            System.out.println("\nLas colas son identicas");
         }
         else {
-            System.out.println("Las colas son diferentes");
+            System.out.println("\nLas colas son diferentes");
         }
     }
 }

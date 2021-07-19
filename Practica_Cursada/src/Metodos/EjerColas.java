@@ -122,6 +122,11 @@ public class EjerColas {
         ColaTDA colaAux2 = new ColaPI();
         colaAux1.inicializarCola();
         colaAux2.inicializarCola();
+        boolean inversa = true;
+
+        if (contarElementosCola(c1) != contarElementosCola(c2)) {
+            inversa = false;
+        }
 
         copiarCola(c1, colaAux1);
         copiarCola(c2, colaAux2);
@@ -131,7 +136,11 @@ public class EjerColas {
             colaAux2.desacolar();
         }
 
-        return determinarColaCapicua(colaAux1);
+        if (!determinarColaCapicua(colaAux1)) {
+            inversa = false;
+        }
+
+        return inversa;
     }
 
     public static void eliminarRepetidos(ColaTDA c1) {

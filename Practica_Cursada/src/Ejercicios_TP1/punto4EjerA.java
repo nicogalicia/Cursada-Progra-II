@@ -2,6 +2,7 @@ package Ejercicios_TP1;
 
 import Metodos.Auxiliares;
 import Metodos.EjerColas;
+import Metodos.EjerPilas;
 import apis.ColaPrioridadTDA;
 import apis.ColaTDA;
 import impl.ColaPI;
@@ -21,7 +22,7 @@ public class punto4EjerA {
 
         EjerColas.pasarCola(c1, c2);
 
-        System.out.println("Nueva Cola");
+        System.out.println("\nNueva Cola");
         EjerColas.imprimirCola(c2);
     }
 }

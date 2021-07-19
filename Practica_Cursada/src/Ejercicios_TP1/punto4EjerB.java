@@ -2,6 +2,7 @@ package Ejercicios_TP1;
 
 import Metodos.Auxiliares;
 import Metodos.EjerColas;
+import Metodos.EjerPilas;
 import apis.ColaTDA;
 import impl.ColaPI;
 
@@ -17,7 +18,7 @@ public class punto4EjerB {
 
         EjerColas.invertirColaConPila(c1);
 
-        System.out.println("Cola Invertida");
+        System.out.println("\nCola Invertida");
         EjerColas.imprimirCola(c1);
     }
 }
