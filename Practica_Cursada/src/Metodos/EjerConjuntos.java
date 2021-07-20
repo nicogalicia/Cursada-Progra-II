@@ -51,7 +51,7 @@ public class EjerConjuntos {
         }
     }
 
-    public static boolean determinarIgualdadCOnjuntos (ConjuntoTDA co1, ConjuntoTDA co2) {
+    public static boolean determinarIgualdad(ConjuntoTDA co1, ConjuntoTDA co2) {
         boolean igualdad = true;
         ConjuntoTDA aux1 = new ConjuntoTA(); aux1.inicializarConjunto();
         ConjuntoTDA aux2 = new ConjuntoTA(); aux2.inicializarConjunto();
@@ -76,7 +76,7 @@ public class EjerConjuntos {
         return igualdad;
     }
 
-    public static int contarElementosConjuntos(ConjuntoTDA co1) {
+    public static int contarElementos(ConjuntoTDA co1) {
         int cantidad = 0;
         int aux;
 
@@ -129,7 +129,7 @@ public class EjerConjuntos {
             colaAux.desacolar();
         }
 
-        return determinarIgualdadCOnjuntos(coAux1, coAux2);
+        return determinarIgualdad(coAux1, coAux2);
     }
 
     public static ConjuntoTDA diferenciaConjuntos(ConjuntoTDA a, ConjuntoTDA b) { //revisar

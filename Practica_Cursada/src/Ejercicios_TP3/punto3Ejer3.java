@@ -15,6 +15,6 @@ public class punto3Ejer3 {
         System.out.println("Conjunto");
         EjerConjuntos.imprimirConjunto(co1);
 
-        System.out.println("\nLa cantidad de elementos es: " + EjerConjuntos.contarElementosConjuntos(co1));
+        System.out.println("\nLa cantidad de elementos es: " + EjerConjuntos.contarElementos(co1));
     }
 }

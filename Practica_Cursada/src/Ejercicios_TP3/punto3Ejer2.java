@@ -21,7 +21,7 @@ public class punto3Ejer2 {
         System.out.println("\nConjunto secundario");
         EjerConjuntos.imprimirConjunto(co2);
 
-        String igualdad = EjerConjuntos.determinarIgualdadCOnjuntos(co1, co2) ? "Las conjuntos son iguales" : "Los conjuntos son diferentes";
+        String igualdad = EjerConjuntos.determinarIgualdad(co1, co2) ? "Las conjuntos son iguales" : "Los conjuntos son diferentes";
         System.out.println(igualdad);
     }
 }
