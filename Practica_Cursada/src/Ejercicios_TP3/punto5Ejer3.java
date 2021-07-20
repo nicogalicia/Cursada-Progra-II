@@ -1,10 +1,12 @@
+package Ejercicios_TP3;
+
 import Metodos.EjerDiccionarios;
 import apis.ConjuntoTDA;
 import apis.DiccionarioMultipleTDA;
 import impl.ConjuntoLD;
 import impl.DicMultipleL;
 
-public class test {
+public class punto5Ejer3 {
     public static void main(String[] args) {
         DiccionarioMultipleTDA dicMA = new DicMultipleL(); dicMA.inicializarDiccionario();
         DiccionarioMultipleTDA dicMB = new DicMultipleL(); dicMB.inicializarDiccionario();
