@@ -64,10 +64,16 @@ Se acola 0,1,2,3,4,5
 * El diccionario simple tiene un solo valor asociado a cada clave
 * El diccionario múltiple tiene uno o más valores asociados a cada clave
 
-#Litas dinámicas
+#Listas dinámicas
 * Es un conjuto de nodos
 * Los nodos son estructuras que tienen el valor (info) y la referencia (sig) al siguiente nodo. El último nodo tiene el elemento y la referencia es "null"
 ![img.png](img.png)
 * Las referencias son recursivas
 * Hay dos estrategias: Agregar al inicio (es mas barato) o Agregar al final (solo se usa en las colas "sin prioridad")
 * En la inicialización de los TDA el nodo va a ser NULL
+
+#Arbol binario
+* Puede tener dos ramas que salgan del elemento anterior.
+* Si el elemento siguiente es menor va a la izquierda, si es mayor va a la derecha 
+* Se denomina hojas a los que no tienen hijos
+* Si se elimina una raíz, siempre se va a reemplazar por el mayor de los menores o el menor de los mayores.

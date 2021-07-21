@@ -1,33 +1,27 @@
 import Metodos.EjerDiccionarios;
+import apis.ABBTDA;
 import apis.ConjuntoTDA;
 import apis.DiccionarioMultipleTDA;
+import impl.ABB;
 import impl.ConjuntoLD;
 import impl.DicMultipleL;
 
 public class test {
     public static void main(String[] args) {
-        DiccionarioMultipleTDA dicMA = new DicMultipleL(); dicMA.inicializarDiccionario();
-        DiccionarioMultipleTDA dicMB = new DicMultipleL(); dicMB.inicializarDiccionario();
-        DiccionarioMultipleTDA dicCompilado = new DicMultipleL(); dicCompilado.inicializarDiccionario();
-        ConjuntoTDA coAux = new ConjuntoLD(); coAux.inicializarConjunto();
+        ABBTDA arbol = new ABB(); arbol.inicializarArbol();
+        arbol.agregarElem(100);
+        arbol.agregarElem(200);
+        arbol.agregarElem(50);
+        System.out.println("raiz: " + arbol.raiz() +", Hijo izquierdo: " + arbol.hijoIzq().raiz() + ", Hijo derecho: " + arbol.hijoDer().raiz());
+        System.out.println("\nImprimir ordenados de menor a mayor");
+        preorder(arbol);
+    }
 
-        dicMA.agregar(1,10);
-        dicMA.agregar(2,20);
-        dicMA.agregar(3,30);
-        dicMA.agregar(3, 300);
-        dicMA.agregar(5, 50);
-
-        dicMB.agregar(4,40);
-        dicMB.agregar(5,500);
-        dicMB.agregar(6,60);
-        dicMB.agregar(1, 10);
-        dicMB.agregar(1, 1000);
-
-
-
-
-        EjerDiccionarios.generarDiccionarioClavesCoincidentes(dicMA, dicMB, dicCompilado);
-
-        EjerDiccionarios.mostrarDiccionarioMultiple(dicCompilado);
+    public static void preorder(ABBTDA a) {
+        if (!a.arbolVacio()) {
+            preorder((a.hijoIzq()));
+            System.out.println(a.raiz());
+            preorder((a.hijoDer()));
+        }
     }
 }
