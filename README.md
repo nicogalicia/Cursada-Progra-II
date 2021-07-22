@@ -77,3 +77,6 @@ Se acola 0,1,2,3,4,5
 * Si el elemento siguiente es menor va a la izquierda, si es mayor va a la derecha 
 * Se denomina hojas a los que no tienen hijos
 * Si se elimina una raíz, siempre se va a reemplazar por el mayor de los menores o el menor de los mayores.
+
+
+* 

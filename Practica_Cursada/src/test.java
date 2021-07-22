@@ -1,10 +1,6 @@
-import Metodos.EjerDiccionarios;
+import Metodos.EjerArboles;
 import apis.ABBTDA;
-import apis.ConjuntoTDA;
-import apis.DiccionarioMultipleTDA;
 import impl.ABB;
-import impl.ConjuntoLD;
-import impl.DicMultipleL;
 
 public class test {
     public static void main(String[] args) {
@@ -12,16 +8,15 @@ public class test {
         arbol.agregarElem(100);
         arbol.agregarElem(200);
         arbol.agregarElem(50);
+        arbol.agregarElem(10);
+        arbol.agregarElem(60);
+        arbol.agregarElem(250);
         System.out.println("raiz: " + arbol.raiz() +", Hijo izquierdo: " + arbol.hijoIzq().raiz() + ", Hijo derecho: " + arbol.hijoDer().raiz());
         System.out.println("\nImprimir ordenados de menor a mayor");
-        preorder(arbol);
-    }
+        EjerArboles.preorder(arbol);
 
-    public static void preorder(ABBTDA a) {
-        if (!a.arbolVacio()) {
-            preorder((a.hijoIzq()));
-            System.out.println(a.raiz());
-            preorder((a.hijoDer()));
-        }
+        System.out.println("La cantidad de elementos es: " + EjerArboles.cantidadElementos(arbol));
+        System.out.println("La cantidad de hojas es: " + EjerArboles.contarHojas(arbol));
+        System.out.println("La cantidad de hojas es: " + EjerArboles.contarHojas1(arbol));
     }
 }
